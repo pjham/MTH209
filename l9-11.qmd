@@ -1,0 +1,123 @@
+---
+title: "DSLAB_shorts"
+format: pdf
+editor: visual
+---
+
+# L7(Linear Programming)
+
+## lib gMOIP
+
+### plotPolytope
+
+A,b,obj
+
+A . x \<= b
+
+optimises obj . x min or max
+
+## lib lpSolve
+
+### lp
+
+solving linear programming
+
+give coefficients of lhs
+
+sign of constraints
+
+then rhs of constraints
+
+give objective coefficients
+
+lp() will return lp object
+
+An lp.object is a list containing the following elements: direction Optimization direction, as entered x.count Number of variables in objective function objective Vector of objective function coefficients, as entered const.count Number of constraints entered constraints Constraint matrix, as entered (not returned by lp.assign or lp.transport) int.count Number of integer variables int.vec Vector of integer variables' indices, as entered objval Value of objective function at optimum solution Vector of optimal coefficients num.bin.solns Numeric indicator of number of solutions returned status Numeric indicator: 0 = success, 2 = no feasible solution
+
+# L8(Networks)
+
+## lib igraph
+
+### sample_gnp(n,p)
+
+n is vertices p is probabiltiy for drawing an edge between two arbitrary vertices (G(n,p)G(n,p) graph).
+
+### barabasi.game(n)
+
+prefential attachment graph something bla bla
+
+## Adjacency matrix
+
+if there is a edge that goes from i -\> j
+
+undirected - symmetric matrix
+
+directed
+
+A
+
+## Degree
+
+no of edges adjacent to a vertice diagnal matrix
+
+D
+
+## Laplacian matrix
+
+L= D-A
+
+dim of nullspace = no of components of the graph
+
+## Transition matrix
+
+P
+
+TPM equal probabilty to go in through each edge
+
+p(i,j)=a(i,j)/di
+
+## Normalized Laplacian matrix
+
+Lp = I-P
+
+sum of eigen values of Lp \<= n **iff** there are no isolated vertices
+
+## igraph
+
+graph.laplacian(igrpah object)
+
+***L8 question 2??***
+
+# L9_1(Stats)
+
+freq\<-table(cut(Carbon\$CO2,breaks,right=FALSE))
+
+# L9_2
+
+Crime\<-read.table("http://stat4ds.rwth-aachen.de/data/Murder2.dat", header=TRUE) boxplot(Crime\$murder\~Crime\$nation,xlab="Murder Rate",horizontal=TRUE) \## boxplot with factors
+
+tapply(Crime\$murder,Crime\$nation,summary) \## data, factor function
+
+table(PID\$race,PID\$id) #forms contingency table
+
+options(digits=2) prop.table(table(PID\$race,PID\$id),margin=1) #Formargin=1, proportions
+
+mosaicplot(table(PID\$race,PID\$id)) #graphical portrayalof cell sizes
+
+# L10_3(Probability)
+
+Psd(n,pi,2) \# probability within k=2 standard deviations of mean
+
+pnorm(1)-pnorm(-1) \# probability within 1 standard deviation of mean
+
+pnorm = F = integration f -inf to q
+
+# L10_4
+
+mesh(x,y) \# function that generates a full 2-D or 3-D grid
+
+persp3D(z = z, x = x, y = y, theta = -30, phi = 30, colvar = z, col="steelblue",shade = 0.5, main="cor=0.7")
+
+last question part d
+
+# L11_1
